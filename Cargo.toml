@@ -1,0 +1,20 @@
+[package]
+name = "chp-core"
+version = "0.1.0"
+edition = "2021"
+description = "Consensus Hardening Protocol (Profile A) core in native Rust: R0 gate, deterministic adversary foundation, human lock machine, payload envelopes, tamper-evident JSONL decision ledger"
+license = "MIT"
+repository = "https://github.com/icohangar-ops/chp-core-rs"
+keywords = ["chp", "governance", "ledger", "gating"]
+categories = ["development-tools"]
+
+[dependencies]
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
+sha2 = "0.10"
+rand = "0.8"
+log = "0.4"
+
+[[bin]]
+name = "chp-gate"
+path = "src/bin/chp-gate.rs"
